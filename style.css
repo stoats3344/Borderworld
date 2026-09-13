@@ -1,0 +1,171 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/*
+"*" to globalny selector, który bierze pod uwagę każdą klasę w dokumencie HTML
+*/
+
+body {
+  background-color: black;
+  /*Viewport unit, problem z używaniem go może być taki, że zalicza on do szerokości też pasek scroll*/
+  /*width: 100vw;*/
+  /*defaltowo szerokość powinna się ustawić na 100%*/
+  /*width: 100%;*/
+  min-height: 100vh;
+  margin: 0.5rem auto;
+  padding: 0.2rem;
+  font-family:"Lusitana", serif;
+}
+/*
+selectory można grupować przecinkami
+*/
+h1 {
+  color: burlywood;
+  rotate: 3deg;
+  font-family: "Lusitana", serif;
+  font-size: 35px;
+  animation: wiggle .3s linear infinite;
+}
+
+h2 {
+  color: burlywood;
+  rotate: -5deg;
+  line-height: 3;
+  font-size: 25px;
+  font-family: "Lusitana", serif;
+  animation: wiggle .3s linear infinite;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: aqua;
+}
+/*pseudoklasy reprezentują dany stan jakiegoś elementu*/
+a:visited {
+  text-decoration: none;
+  color: hotpink;
+}
+/*możemy odwołać się do dwóch pseudoklas na raz*/
+a:hover, a:focus{
+  animation: wiggle .3s linear infinite;
+}
+a:active {
+  opacity: 0.5;
+}
+
+p {
+  color: beige;
+  font-size: 15px;
+}
+/*
+jeżeli nie dodamy przecinka, HTML będzie szukać elementów zagnieżdżonych w sobie.
+Przykładowo elementy "span" w elementach "p":
+*/
+p mark{
+  color: indianred;
+  background-color: rgba(0, 0, 0, 0);
+  animation: wiggle .3s linear infinite;
+}
+/*
+w ten sposób możemy przykładowo stylizować podkreślenia, lepiej jednak w tym konkretnym przypadku używać klasy
+*/
+
+footer {
+  text-align: center;
+  font-size: 15px;
+  color: beige;
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+}
+footer li {
+  display: inline;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  max-width: 976px;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.side_navbar {
+  width: 200px;
+  margin-right: 20px;
+  padding: 20px;
+  display: block;
+  background-color: rgba(54, 54, 54, 0.743);
+  border: 10px solid transparent;
+  border-image: url(images/patterns/obwodka_alt.gif) 10 round;
+  background-clip: padding-box;
+}
+.side_navbar li {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bg1 {
+  background:#000 url(images/patterns/bg-trees.png) repeat-x top center;
+}
+.bg2 {
+  flex: 1;
+  width: 600px;
+  height: auto;
+  padding: 1.25rem 2rem 2rem;
+  background-color:rgba(54, 54, 54, 0.743);
+  border: 10px solid transparent;
+  border-image: url(images/patterns/obwodka_alt.gif) 10 round;
+  background-clip: padding-box;
+}
+
+.gallery {
+  display: inline-block;
+  margin: 5px;
+  width: 290px;
+}
+.gallery .description {
+  color: beige;
+  font-size: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.gallery img{
+  width: 100%;
+  height: auto;
+}
+
+/*
+klasa zaczyna się kropką i może mieć dowolną nazwę.
+Przywołujemy ją w HTMLu używając komendy class=.
+*/
+.inverted {
+  filter: invert(1);
+}
+
+#enter {
+  transform: rotate(-10deg);
+  transition: 0.3s;
+}
+#enter:hover{
+  transform: rotate(0deg);
+}
+
+@keyframes wiggle{
+  0% {filter: url("#dancingstroke0");}
+  25% {filter: url("#dancingstroke1");}
+  50% {filter: url("#dancingstroke2");}
+  75% {filter: url("#dancingstroke3");}
+  100% {filter: url("#dancingstroke4");}
+}

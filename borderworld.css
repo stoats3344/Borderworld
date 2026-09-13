@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p {
+    color: black;
+}
+
+.paper {
+    background-image: url("images/misc/paper_background1.png");
+    display: inline-block;
+    height: 686px;
+    width: 982px;
+}
+.paper p {
+    font-size: 35px;
+    padding: 50px;
+    padding-left: 75px;
+    line-height: 3rem;
+    font-family: 'Annie Use Your Telescope', cursive;
+}
