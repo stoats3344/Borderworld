@@ -1,6 +1,7 @@
 body {
     background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -8,18 +9,41 @@ body {
 
 p {
     color: black;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 35px;
+    padding: 60px;
+    padding-left: 75px;
+    line-height: 3rem;
+}
+
+a {
+    color: brown;
+    padding: 50px;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: right;
+    transition: 0.1s;
+}
+a:hover, a:focus {
+    animation: wiggle .3s linear infinite;
+}
+a:visited{
+    color: brown;
 }
 
 .paper {
     background-image: url("images/misc/paper_background1.png");
-    display: inline-block;
     height: 686px;
     width: 982px;
 }
-.paper p {
-    font-size: 35px;
-    padding: 50px;
-    padding-left: 75px;
-    line-height: 3rem;
-    font-family: 'Annie Use Your Telescope', cursive;
+.paper a{
+    rotate: 25deg;
+}
+
+@keyframes wiggle{
+  0% {filter: url("#dancingstroke0");}
+  25% {filter: url("#dancingstroke1");}
+  50% {filter: url("#dancingstroke2");}
+  75% {filter: url("#dancingstroke3");}
+  100% {filter: url("#dancingstroke4");}
 }
