@@ -8,9 +8,10 @@ body {
 }
 
 p {
+    display: flex;
     color: black;
     font-family: 'Annie Use Your Telescope', cursive;
-    font-size: 35px;
+    font-size: 30px;
     padding: 60px;
     padding-left: 75px;
     line-height: 3rem;
@@ -18,11 +19,11 @@ p {
 
 a {
     color: brown;
-    padding: 50px;
     font-size: 40px;
     text-decoration: none;
     text-align: right;
     transition: 0.1s;
+    rotate: 7deg;
 }
 a:hover, a:focus {
     animation: wiggle .3s linear infinite;
@@ -35,9 +36,6 @@ a:visited{
     background-image: url("images/misc/paper_background1.png");
     height: 686px;
     width: 982px;
-}
-.paper a{
-    rotate: 25deg;
 }
 
 @keyframes wiggle{
