@@ -11,7 +11,11 @@ p {
     display: flex;
     color: black;
     font-family: 'Annie Use Your Telescope', cursive;
+<<<<<<< HEAD
     font-size: 30px;
+=======
+    font-size: 35px;
+>>>>>>> cc9b23682388f8b0fe802e72ccc283d4838f4e8f
     padding: 60px;
     padding-left: 75px;
     line-height: 3rem;
@@ -19,11 +23,18 @@ p {
 
 a {
     color: brown;
+<<<<<<< HEAD
+=======
+    padding: 50px;
+>>>>>>> cc9b23682388f8b0fe802e72ccc283d4838f4e8f
     font-size: 40px;
     text-decoration: none;
     text-align: right;
     transition: 0.1s;
+<<<<<<< HEAD
     rotate: 7deg;
+=======
+>>>>>>> cc9b23682388f8b0fe802e72ccc283d4838f4e8f
 }
 a:hover, a:focus {
     animation: wiggle .3s linear infinite;
@@ -37,6 +48,12 @@ a:visited{
     height: 686px;
     width: 982px;
 }
+<<<<<<< HEAD
+=======
+.paper a{
+    rotate: 25deg;
+}
+>>>>>>> cc9b23682388f8b0fe802e72ccc283d4838f4e8f
 
 @keyframes wiggle{
   0% {filter: url("#dancingstroke0");}
