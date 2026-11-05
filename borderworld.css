@@ -38,6 +38,17 @@ a:visited{
     width: 982px;
 }
 
+.outside_text p{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.outside_text img{
+    display: flex;
+    
+}
+
 @keyframes wiggle{
   0% {filter: url("#dancingstroke0");}
   25% {filter: url("#dancingstroke1");}
